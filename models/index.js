@@ -3,3 +3,4 @@
  */
 require('./users');
 require('./pet-life');
+require('./pet-infomation');
