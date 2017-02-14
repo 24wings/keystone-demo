@@ -27,4 +27,8 @@ var routes = {
 exports = module.exports = function(app) {
     app.get('/petLife/top5', routes.views.petLife.Top5);
     app.get('/petInformation/top3', routes.views.petInformation.Top3);
+    app.get('/petHeathy/top3', routes.views.petHeathy.Top3);
+    app.get('/petAction/top3', routes.views.petAction.Top3);
+    app.get('/data/getData', routes.views.data.getData);
+    app.get('/data/getDataById', routes.views.data.getDataById);
 };

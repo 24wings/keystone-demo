@@ -1,15 +1,17 @@
 var keystone = require('keystone'),
     Types = keystone.Field.Types;
 
-var PetInformation = new keystone.List('PetInformation', {
-    label: '宠物资讯',
+
+var PetHeathy = new keystone.List('PetHeathy', {
     map: { name: 'title' },
+    label: '宠物健康',
     defaultSort: '-createdAt'
 });
 
 
-PetInformation.add({
-    title: { label: '标题', initial: true, type: String, required: true },
+
+PetHeathy.add({
+    title: { label: '宠物健康标题', type: String, initial: true, type: String, required: true },
     createdAt: { label: '发布时间', type: Date, default: Date.now, required: true, initial: true },
     image: { label: '图片', type: Types.CloudinaryImages, folder: 'images/' },
     sourceWebsite: { label: '来源', type: String },
@@ -20,5 +22,4 @@ PetInformation.add({
     tags: { label: '标签组', type: Types.Relationship, many: true, ref: 'PetTags' }
 });
 
-// 宠物信息注册
-PetInformation.register();
+PetHeathy.register();
