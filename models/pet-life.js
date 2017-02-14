@@ -7,6 +7,7 @@ var PetLife = new keystone.List('PetLife', {
     map: { name: 'title' },
     defaultSort: '-createdAt'
 });
+// PetLife.relationship({path:'posts',ref:'',refPath:''});
 
 PetLife.add({
     title: { label: '标题', initial: true, type: String, required: true },

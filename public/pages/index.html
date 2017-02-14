@@ -42,16 +42,13 @@
             <p class="zuixin-1"></p>
             <p class="zuixin-2">最新<span>NEWS</span></p>
         </div>
-        <div class="neirong-box2-left-nr">
-            <img src="images/a.jpg" alt="">
-            <h2>摄影师捕捉豹纹陆龟羞羞过程</h2>
-            <p>据悉，陆龟交配后会在数分钟内射精，雄性会慢慢离开雌性，如果受孕成功，可以孕育出约5～18颗蛋</p>
+        <div class="neirong-box2-left-nr" ng-repeat="petInformation in top3PetInformations">
+            <img src="{{petInformation.image[0].url}}" alt="">
+            <h2>{{petInformation.title}}</h2>
+            <div MyHtml=" {{petInformation.brief}}"></div>
             <div class="biaoqian">
-                <a href="">陆龟</a>
-                <a href="">豹纹</a>
-                <a href="">威廉斯</a>
-                <a href="">摄影师</a>
-                <a href="">动物</a>
+                <a href="" ng-repeat="tag in petInformation.tags">{{tag}}</a>
+
                 <img src="images/01_13.png" alt="">
                 <span>7</span>
             </div>
@@ -276,4 +273,6 @@
         <h3>---《我的宠物朋友》---</h3>
     </div>
 </div>
+
+<custom-html></custom-html>
 <!-- 内容结束 -->

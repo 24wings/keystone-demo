@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/24wings/keystone-demo#readme",
   "dependencies": {
+    "@types/angular": "^1.6.5",
     "@types/angularjs": "^1.5.14-alpha",
     "angular": "^1.6.2",
     "angular-route": "^1.6.2",

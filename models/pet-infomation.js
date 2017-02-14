@@ -15,8 +15,9 @@ PetInformation.add({
     sourceWebsite: { label: '来源', type: String },
     articleSource: { label: '文章出处', type: String },
     author: { label: '作者', type: String },
+    brief: { label: '摘要', type: Types.Html, wysiwyg: true },
     content: { label: '文章内容', type: Types.Html, wysiwyg: true },
-    tags: { label: '标签组', type: Types.Key, many: true }
+    tags: { label: '标签组', type: Types.Relationship, many: true, ref: 'PetTags' }
 
 });
 

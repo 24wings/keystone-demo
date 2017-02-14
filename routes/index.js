@@ -26,4 +26,5 @@ var routes = {
 
 exports = module.exports = function(app) {
     app.get('/petLife/top5', routes.views.petLife.Top5);
+    app.get('/petInformation/top3', routes.views.petInformation.Top3);
 };
