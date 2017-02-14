@@ -19,7 +19,16 @@ PetAction.add({
     author: { label: '作者', type: String, default: '动物学家' },
     brief: { label: '摘要', type: Types.Html, wysiwyg: true },
     content: { label: '文章内容', type: Types.Html, wysiwyg: true },
-    tags: { label: '标签组', type: Types.Relationship, many: true, ref: 'PetTags' }
+    tags: { label: '标签组', type: Types.Relationship, many: true, ref: 'PetTags' },
+    file: {
+        label: '文件',
+        type: Types.Embedly,
+        from: 'path',
+        options: {
+            file: 'video',
+            video_file: ''
+        }
+    }
 });
 
 
